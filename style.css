@@ -1,4 +1,11 @@
+* {
+    margin: 0; 
+    padding: 0; 
+}
+
 .knapper {
+  display:flex;
+  align-items: center;
   background-color: rgb(234, 215, 245);
   text-align: center;
   margin-top: 10px;
@@ -37,10 +44,6 @@ header {
     background-color: lemonchiffon;
 }
 
-/* body {
-    display: grid;
-} */
-
 .textlogo {
     font-weight: bold;
     color: darkslategray;
@@ -51,3 +54,26 @@ h1 {
     margin-left: 20px;
     color: rgb(46, 68, 68);
 }
+
+.grid_1-1-1 {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 10px;
+}
+
+.grid_1-1-1-1 {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 10px;
+}
+
+img {
+    width: 100%;
+}
+
+
+/* .grid_1{
+display: grid;
+grid-template-columns: 1fr;
+gap: 10px;
+} */
