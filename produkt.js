@@ -8,10 +8,12 @@ console.log(id);
 
 fetch(`https://kea-alt-del.dk/t7/api/products/${id}`)
   .then((response) => response.json())
-  .then((product) => {
-    console.log(product);
+  .then(showProduct);
 
-    productContainer.innerHTML = `
+function showProduct(product) {
+  console.log(product);
+
+  productContainer.innerHTML = `
 <div>
         <img
           src="https://kea-alt-del.dk/t7/images/webp/640/${product.id}.webp"
@@ -24,17 +26,17 @@ fetch(`https://kea-alt-del.dk/t7/api/products/${id}`)
           <p>Model name</p>
           <p>${product.productdisplayname}</p>
           <p>Color</p>
-          <p>blue</p>
-          <p>Ivenory number</p>
-          <p>1164</p>
-          <h1 class="H1produkt">Nike</h1>
-          <p>Nike, creating, experiences</p>
+          <p>${product.basecolour}</p>
+          <p>Materials</p>
+          <p>${product.variantname}</p>
+          <h1 class="H1produkt">${product.brandname}</h1>
+          <p>${product.description}</p>
         </div>
       </div>
       <div>
-        <h2 class="H2produkt">Sahara team India fanwear round Jersey</h2>
+        <h2 class="H2produkt">${product.productdisplayname}</h2>
         <p>${product.brandname} - ${product.articletype}</p>
         <div class="produktknap">Add to basket</div>
       </div>
 `;
-  });
+}
