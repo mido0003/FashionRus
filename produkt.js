@@ -8,7 +8,7 @@ console.log(id);
 
 fetch(`https://kea-alt-del.dk/t7/api/products/${id}`)
   .then((response) => response.json())
-  .then(showProduct);
+  .then((data) => showProduct(data));
 
 function showProduct(product) {
   console.log(product);
