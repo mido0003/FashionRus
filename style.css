@@ -121,3 +121,12 @@ img:hover {
 opacity: 50%;
     
 }
+
+.udsolgt {
+    background-color: red;
+    color: aliceblue;
+    padding-bottom: 10px;
+    padding-top: 10px;
+    padding-left: 20px;
+    margin-right: 310px;
+}
