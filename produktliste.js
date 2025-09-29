@@ -1,4 +1,4 @@
-const productListContainer = document.querySelector("main");
+const productListContainer = document.querySelector(".grid_1-1-1-1");
 
 // const params = new URLSearchParams(window.location.search);
 
@@ -15,7 +15,7 @@ function showProducts(products) {
   products.forEach((element) => {
     console.log(element);
     productListContainer.innerHTML += `
-  <div class="grid_1-1-1-1">
+
      <div> <img src="https://kea-alt-del.dk/t7/images/webp/640/${element.id}.webp" alt="Undertrøje"/>
         <h2>${element.productdisplayname}</h2>
         <p>${element.articletype}</p>
