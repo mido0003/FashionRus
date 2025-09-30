@@ -17,8 +17,10 @@
   display: inline-block;
   padding-left: 20px;
   padding-right: 20px;
-  padding-top: 10px;
-  padding-bottom: 10px;
+  padding-top: 40px;
+  padding-bottom: 40px;
+  text-decoration: none;
+  font-weight: bold;
 }
 
 .produktknap {
@@ -37,6 +39,7 @@
   padding-right: 20px;
   padding-top: 10px;
   padding-bottom: 10px;
+  text-decoration: none;
 }
 
 .knapper:hover {
@@ -59,7 +62,7 @@ background-color:thistle;
 header {
     display: flex;
     justify-content: space-between;
-    background-color: lemonchiffon;
+    background-color: cornsilk;
     padding: 20px;
 }
 
@@ -77,7 +80,7 @@ h1 {
 
 .H1produkt {
     margin-left: 0px;
-    margin-top: 50px;
+    margin-top: 100px;
     color: rgb(46, 68, 68);
 }
 
@@ -87,8 +90,8 @@ margin-top: 20px;
 
 
 .H2produkt {
- margin-left: 0px;
-    margin-top: 60px;
+    margin-left: 0px;
+    margin-top: 100px;
     color: rgb(46, 68, 68);   
 }
 
@@ -114,12 +117,31 @@ margin-top: 20px;
 }
 
 img {
-    width: 100%;
+  width: 100%;
+  margin-top: 70px;
+  border-width: 3px;
+  border-style: solid;
+  border-radius: 20px;
+  border-color: rgb(207, 207, 207);
 }
 
 img:hover {
 opacity: 50%;
+border-color: rgb(13, 70, 72);
     
+}
+
+#filters button {
+    color: #171717;
+    background-color:rgb(234, 215, 245);
+    border: none;
+    border-radius: 10px;
+    padding: 20px;
+    font-weight: bold;
+}
+
+#filters button:hover {
+background-color:thistle
 }
 
 .udsolgt {
@@ -127,6 +149,31 @@ opacity: 50%;
     color: aliceblue;
     padding-bottom: 10px;
     padding-top: 10px;
-    padding-left: 20px;
     margin-right: 310px;
+}
+
+.tilbud {
+    background-color: gold;
+    padding-bottom: 10px;
+    padding-top: 10px;
+    margin-right: 310px;
+    font-weight: bold;
+}
+
+#filters {
+margin-top: 40px;
+margin-left: 40px;
+}
+
+.category_title {
+    color: #171717;
+}
+
+a {
+    color: black;
+  text-decoration: none;
+}
+
+a:visited {
+  color: black;
 }

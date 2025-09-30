@@ -41,11 +41,11 @@ function showProducts(products) {
         <p>${element.articletype}</p>
         <p>${element.brandname}</p>
         <p>${element.price}</p>
-        ${element.soldout ? "<p class='udsolgt'>SOLD OUT</p>" : ""}
+        ${element.soldout ? "<p class='udsolgt'>Sold out</p>" : ""}
         ${
           element.discount
-            ? `<p class='tilbud'>Tilbud ${element.discount}%</p>
-              <p>NOW DKK ${Math.round(
+            ? `<p class='tilbud'>Offer ${element.discount}%</p>
+              <p>Now ${Math.round(
                 element.price - (element.price * element.discount) / 100
               )},-</p>`
             : ""
