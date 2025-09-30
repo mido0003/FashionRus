@@ -21,7 +21,7 @@ function showFiltered() {
 
 let allData;
 
-fetch(`https://kea-alt-del.dk/t7/api/products?limit=20&category=${category}`)
+fetch(`https://kea-alt-del.dk/t7/api/products?limit=100&category=${category}`)
   .then((response) => response.json())
   .then((data) => {
     allData = data;
@@ -42,7 +42,14 @@ function showProducts(products) {
         <p>${element.brandname}</p>
         <p>${element.price}</p>
         ${element.soldout ? "<p class='udsolgt'>SOLD OUT</p>" : ""}
-        ${element.discount ? "<p class='tilbud'></p>" : ""}
+        ${
+          element.discount
+            ? `<p class='tilbud'>Tilbud ${element.discount}%</p>`
+            : ""
+        }
+        <p>NOW DKK ${Math.round(
+          element.price - (element.price * element.discount) / 100
+        )},-</p>
         <a href="produkt.html?id=${element.id}">Read more</a>
         </div>`;
   });
