@@ -48,6 +48,7 @@ background-color:thistle;
 
 .headertext{
     list-style-type: none;
+    color: blueviolet;
     text-align: right;
     display: inline;
     margin-right: 20px;
@@ -64,6 +65,7 @@ header {
     justify-content: space-between;
     background-color: cornsilk;
     padding: 20px;
+    padding-bottom: 60px;
 }
 
 .textlogo {
@@ -144,8 +146,24 @@ border-color: rgb(13, 70, 72);
 background-color:thistle
 }
 
+#sorting button {
+    color: #171717;
+    background-color:rgb(234, 215, 245);
+    border: none;
+    border-radius: 10px;
+    padding: 20px;
+    margin-top: 10px;
+    font-weight: bold;
+    margin-left: 30px;
+}
+
+#sorting button:hover {
+background-color:thistle
+}
+
 .udsolgt {
     background-color: red;
+    border-radius: 5px;
     color: aliceblue;
     padding-bottom: 10px;
     padding-top: 10px;
@@ -154,6 +172,7 @@ background-color:thistle
 
 .tilbud {
     background-color: gold;
+    border-radius: 5px;
     padding-bottom: 10px;
     padding-top: 10px;
     margin-right: 310px;
