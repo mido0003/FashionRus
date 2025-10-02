@@ -5,6 +5,18 @@ const productListContainer = document.querySelector(".grid_1-1-1-1");
 
 document.querySelector(".category_title").textContent = category;
 
+document.querySelector("#sorting").addEventListener("click", showSorted);
+
+function showSorted(event) {
+  const direction = event.target.dataset.direction;
+  if (direction == "lohi") {
+    currentDataSet.sort((a, b) => a.price - b.price);
+  } else {
+    currentDataSet.sort((a, b) => b.price - a.price);
+  }
+  showProducts(currentDataSet);
+}
+
 document
   .querySelectorAll("#filters button")
   .forEach((knap) => knap.addEventListener("click", showFiltered));
@@ -12,14 +24,15 @@ function showFiltered() {
   console.log(this.dataset.gender);
   const gender = this.dataset.gender;
   if (gender == "All") {
-    showProducts(allData);
+    currentDataSet(allData);
   } else {
     const udsnit = allData.filter((product) => product.gender == gender);
-    showProducts(udsnit);
+    currentDataSet = udsnit;
   }
+  showProducts(currentDataSet);
 }
 
-let allData;
+let allData, currentDataSet;
 
 fetch(`https://kea-alt-del.dk/t7/api/products?limit=100&category=${category}`)
   .then((response) => response.json())
@@ -41,11 +54,11 @@ function showProducts(products) {
         <p>${element.articletype}</p>
         <p>${element.brandname}</p>
         <p>${element.price}</p>
-        ${element.soldout ? "<p class='udsolgt'>SOLD OUT</p>" : ""}
+        ${element.soldout ? "<p class='udsolgt'>Sold out</p>" : ""}
         ${
           element.discount
-            ? `<p class='tilbud'>Tilbud ${element.discount}%</p>
-              <p>NOW DKK ${Math.round(
+            ? `<p class='tilbud'>Offer ${element.discount}%</p>
+              <p>Now ${Math.round(
                 element.price - (element.price * element.discount) / 100
               )},-</p>`
             : ""

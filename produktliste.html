@@ -7,27 +7,31 @@
     <script src="produktliste.js" defer></script>
     <title>Fashion</title>
   </head>
-  <header>
-    <p class="textlogo">FashionRus</p>
-    <ul class="headerlist">
-      <li class="headertext"> <a href="index.html">Categories</a></li>
-      <li class="headertext"> <a href="produktliste.html">Brands</a></li>
-       <li class="headertext"><a href="produkt.html">Seasons</a></li>
-    </ul>
-  </header>
- <section id="filters">
-  <button data-gender="All">All</button>
-   <button data-gender="Unisex">Unisex</button>
-    <button data-gender="Women">Women</button>
-     <button data-gender="Men">Men</button>
- </section>
   <body>
-    <body> 
-      <main>
-    <div>
-      <h1 class="category_title">Produktliste</h1>
-    </div>
-    <div class="grid_1-1-1-1"></div>
-  </main>
+    <header>
+      <p class="textlogo">FashionRus</p>
+      <ul class="headerlist">
+        <li class="headertext"><a href="index.html">Categories</a></li>
+        <li class="headertext"><a href="produktliste.html">Brands</a></li>
+        <li class="headertext"><a href="produkt.html">Seasons</a></li>
+      </ul>
+    </header>
+
+    <main>
+      <section id="filters">
+        <button data-gender="All">All</button>
+        <button data-gender="Unisex">Unisex</button>
+        <button data-gender="Women">Women</button>
+        <button data-gender="Men">Men</button>
+      </section>
+      <section id="sorting">
+        <button data-direction="lohi">Pice low to high</button>
+        <button data-direction="hilo">Price high to low</button>
+      </section>
+      <div>
+        <h1 class="category_title">Produktliste</h1>
+      </div>
+      <div class="grid_1-1-1-1"></div>
+    </main>
   </body>
 </html>
